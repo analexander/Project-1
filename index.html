@@ -1,95 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width", initial-scale=1.0>
-  <title>Reeferal</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-  <link rel="stylesheet" type="text/css" href="Assets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <style>
+      body {
+        font-family: 'Crimson Pro', serif;
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
 </head>
 <body>
-  <header>
-    <div style="overflow: hidden;height: 70px;"> <!-- For Demo, Represents the body -->
-      <nav>
-        <a href="index.html" id="logo">Reeferal
-          <img class="cannabis" src="Assets/weed.png" alt="cannabis leaf">
-        <!-- <img class="logo" src="/img/basket.png" /> -->
-        </a>
-        <!-- responsive-->
-        <input id="bmenub" type="checkbox" class="show">
-        <label for="bmenub" class="burger pseudo button">menu</label>
-        <div class="menu">
-          <a href="#" class="pseudo button icon-picture">view all strains</a>
-          <a href="#" class="button icon-puzzle">find a dispensary</a>
+    
+    <!-- Weather Dashboard Header -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-5 text-center">Weather Dashboard</h1>
         </div>
-      </nav>
     </div>
-  </header>
-    <!--Show modal button-->
-    <label for="modal_1" class="button">Show modal</label>
-    <!--Modal-->
-    <div class="modal" id="myModal">
-      <input id="modal_1" type="checkbox"/>
-      <label for="modal_1" class="overlay"></label>
-      <article>
-        <header>
-          <h3>Welcome to Reeferal!</h3>
-          <label for="modal_1" class="close">&times;</label>
-        </header>
-        <section class="content">
-          <h3>What's your flavor?</h3>
-          <!--Dropdown Search Parameters-->
-          <select>
-            <option>Type</option>
-            <option>Any</option>
-            <option>Indica</option>
-            <option>Sativa</option>
-            <option>Hybrid</option>
-          </select>
-          <select>
-            <option>Flavor</option>
-            <option>Any</option>
-            <option>Indica</option>
-            <option>Sativa</option>
-            <option>Hybrid</option>
-          </select>
-          <select>
-            <option>Effect</option>
-            <option>Any</option>
-            <option>Indica</option>
-            <option>Sativa</option>
-            <option>Hybrid</option>
-          </select>
-        </section>
-        <footer>
-          <a class="button" id="submitBtn" href="#">Submit</a>
-          <label for="modal_1" class="button dangerous">
-            Cancel
-          </label>
-        </footer>
-      </article>
+    
+    <!-- Main Content Container -->
+    <div class="container-fluid">
+        <!-- Main Content Row -->
+        <div class="row">
+            <!-- City Search Bar -->
+            <div class="col-3 searchCol">
+                <!-- Search Form with Button -->
+                <h4>Search a city:</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="cityInput" placeholder="City Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="citySearchBtn">
+                            <img src="Assets/search.png" width="20px"/></button>
+                        </div>
+                    </div>
+                    <!-- City Table List -->
+                    <div class="list-group" id="cityList">
+                      </div>                    
+                </div>
+                <!-- Weather Information Column -->
+                <div class="col-9">
+                    <div class="card" style="width: 100%;" id="weatherContainer"></div>
+                      <div id="forecastContainer"></div>
+                </div>
+        </div>
     </div>
-    <!--Search Results-->
-    <div>
-      <div>
-        <article class="card" id="resultsBox">
-          <footer>
-            <h2>Search Results</h2>
-            <section id="searchResults"><section>
-                  <input type="text" class="form-control" id="search" placeholder="Search Photos">
-                  <button onclick="SearchPhotos()">Search</button>
-                  <div id="result">
-
-                  </div>
-            <button id="faveBtn">♡</button>
-          </footer>
-        </article>
-      </div>
-    </div>
-            <!-- jQuery JS -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Code to the JavaScript File -->
-  <script src="Javascript/script.js"></script>
+    <footer class="footer mt-auto py-3 text-center">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
